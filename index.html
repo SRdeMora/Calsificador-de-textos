@@ -2,29 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Clasificación de Texto</title>
+    <title>Clasificador de Textos</title>
+    <script src="script.js"></script> <!-- Enlace al archivo JavaScript -->
 </head>
 <body>
-    <h1>Clasificar Texto</h1>
+    <h1>Clasificación de Texto</h1>
     <textarea id="textoEntrada" rows="4" cols="50" placeholder="Escribe tu texto aquí..."></textarea>
-    <button onclick="enviarTexto()">Clasificar</button>
+    <br>
+    <button id="botonClasificar">Clasificar</button>
     <p id="resultado"></p>
-
-    <script>
-        function enviarTexto() {
-            let texto = document.getElementById("textoEntrada").value;
-
-            fetch("https://calsificador-de-textos.onrender.com", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ text: texto })
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById("resultado").innerText = "Categoría: " + data.category;
-            })
-            .catch(error => console.error("Error:", error));
-        }
-    </script>
 </body>
 </html>
