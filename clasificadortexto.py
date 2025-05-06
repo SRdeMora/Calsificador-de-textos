@@ -24,6 +24,10 @@ nltk.download('stopwords')
 app = Flask(__name__)
 CORS(app)
 # Carga el modelo y vectorizador (ajusta el nombre del archivo si lo guardaste distinto)
+@app.route("/", methods=["GET"])
+def home():
+    return "<h1>API de Clasificación de Texto</h1><p>Usa /predict para obtener una categoría.</p>"
+
 
 model = joblib.load('modelo.pkl')
 
