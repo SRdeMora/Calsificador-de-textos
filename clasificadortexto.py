@@ -15,13 +15,14 @@ from nltk.stem import SnowballStemmer
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import nltk
-
+from flask import Flask, request, jsonify
+from flask_cors import CORS 
 # Descargas necesarias
 nltk.download('punkt')
 nltk.download('stopwords')
 
 app = Flask(__name__)
-
+CORS(app)
 # Carga el modelo y vectorizador (ajusta el nombre del archivo si lo guardaste distinto)
 
 model = joblib.load('modelo.pkl')
