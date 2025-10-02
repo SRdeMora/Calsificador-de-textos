@@ -19,13 +19,16 @@
 
 ## 📜 Descripción del Proyecto
 
-Este repositorio contiene un clasificador de textos multiclase entrenado con técnicas de Procesamiento de Lenguaje Natural (NLP). El sistema toma un texto (por ejemplo, el titular o cuerpo de una noticia) y lo asigna a una de las siguientes categorías:
+Este repositorio contiene un clasificador de textos multiclase entrenado con técnicas de Procesamiento de Lenguaje Natural (NLP). El sistema está diseñado para analizar textos de índole corporativa o económica y asignarlos a una de las siguientes categorías estratégicas:
 
--   ⚽ **Deportes**
--   💰 **Economía**
--   🎬 **Entretenimiento**
--   🔬 **Ciencia y Tecnología**
--   ⚕️ **Salud**
+-   💰 **Macroeconomía**
+-   🤝 **Alianzas**
+-   💡 **Innovación**
+-   ⚖️ **Regulaciones**
+-   🌟 **Reputación**
+-   🌱 **Sostenibilidad**
+-   📁 **Otras**
+
 
 El proyecto está listo para usar e incluye tanto el **modelo de Machine Learning ya entrenado** como una **interfaz web sencilla** para probar su funcionamiento en tiempo real.
 
